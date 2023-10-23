@@ -1,24 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PianoApp3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kv6-Px-dtz">
+                                <rect key="frame" x="8" y="0.0" width="844" height="393"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6W-xD-22B">
+                                        <rect key="frame" x="0.66666666666668561" y="161" width="636" height="232"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dw-BX-i84" userLabel="C3">
+                                                <rect key="frame" x="0.0" y="0.0" width="159" height="232"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="232" id="7W9-ef-b3t"/>
+                                                    <constraint firstAttribute="width" constant="159" id="Nhb-Ys-7nh"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="C3" titleAlignment="leading"/>
+                                                <connections>
+                                                    <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZ5-ul-PbM"/>
+                                                    <action selector="whiteKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QFV-jz-mFX"/>
+                                                    <action selector="whiteKeyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AqH-QK-kaU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5D-Ua-thn" userLabel="D3">
+                                                <rect key="frame" x="159" y="0.0" width="159" height="232"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="159" id="SdV-57-1jE"/>
+                                                    <constraint firstAttribute="height" constant="232" id="U2s-e2-aTZ"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="232" id="ZrX-hF-kEv"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="f2e-zp-qpX"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="D3"/>
+                                                <connections>
+                                                    <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Av9-fx-Zd0"/>
+                                                    <action selector="whiteKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zn5-Ed-I0I"/>
+                                                    <action selector="whiteKeyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwg-R8-4AF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw1-6T-Mk1" userLabel="E3">
+                                                <rect key="frame" x="318" y="0.0" width="159" height="232"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="HUL-8F-FjY"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="232" id="Jv2-Y9-tbM"/>
+                                                    <constraint firstAttribute="height" constant="232" id="PUD-0g-QUZ"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="232" id="V03-gG-kJy"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="159" id="dHs-8d-M60"/>
+                                                    <constraint firstAttribute="width" constant="159" id="qwS-Ld-dGP"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="E3"/>
+                                                <connections>
+                                                    <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNb-gF-i51"/>
+                                                    <action selector="whiteKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pd1-86-hS5"/>
+                                                    <action selector="whiteKeyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NAq-tz-qpC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygo-Vr-jCH" userLabel="F3">
+                                                <rect key="frame" x="477" y="0.0" width="159" height="232"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="232" id="BWt-ax-Jvp"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="159" id="Kdo-ry-cXE"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="159" id="RE3-n1-f8A"/>
+                                                    <constraint firstAttribute="width" constant="159" id="Uji-EZ-0Ie"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="232" id="WNJ-HX-4Pg"/>
+                                                    <constraint firstAttribute="height" constant="232" id="tyM-pe-HE9"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="vaM-xn-3Hr"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="232" id="yyZ-QV-DEi"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="F3"/>
+                                                <connections>
+                                                    <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wE5-v3-idZ"/>
+                                                    <action selector="whiteKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ciy-dw-fQJ"/>
+                                                    <action selector="whiteKeyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDx-De-QBM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZT-6a-Z9J" userLabel="Csharp3">
+                                        <rect key="frame" x="118" y="161" width="75" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="148" id="D4x-97-UoM"/>
+                                            <constraint firstAttribute="width" constant="75" id="mYf-vF-IpF"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="C#3">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="blackKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DF6-6x-IUh"/>
+                                            <action selector="blackKeyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJi-DM-e6X"/>
+                                            <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XaT-lf-frw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kql-i7-6Wu" userLabel="Dsharp3">
+                                        <rect key="frame" x="281" y="161" width="75" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="KqF-P8-c6w"/>
+                                            <constraint firstAttribute="height" constant="148" id="wJ5-Cl-XSb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="D#3">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="blackKeyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VFh-Q1-EIW"/>
+                                            <action selector="blackKeyReleased:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aMy-Ks-RT9"/>
+                                            <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NvO-jC-68s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="kql-i7-6Wu" secondAttribute="bottom" constant="84" id="0Z3-PH-AhH"/>
+                                    <constraint firstItem="FZT-6a-Z9J" firstAttribute="leading" secondItem="Kv6-Px-dtz" secondAttribute="leading" constant="118" id="DVN-Ho-veu"/>
+                                    <constraint firstAttribute="bottom" secondItem="FZT-6a-Z9J" secondAttribute="bottom" constant="84" id="Tf3-va-fRf"/>
+                                    <constraint firstItem="kql-i7-6Wu" firstAttribute="leading" secondItem="FZT-6a-Z9J" secondAttribute="trailing" constant="88" id="deX-9j-mAL"/>
+                                    <constraint firstItem="kql-i7-6Wu" firstAttribute="centerX" secondItem="H6W-xD-22B" secondAttribute="centerX" id="pCB-e1-NHG"/>
+                                    <constraint firstItem="kql-i7-6Wu" firstAttribute="top" secondItem="H6W-xD-22B" secondAttribute="top" id="uwF-iH-xiX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Kv6-Px-dtz" secondAttribute="bottom" id="9bk-Uk-lqu"/>
+                            <constraint firstAttribute="trailing" secondItem="Kv6-Px-dtz" secondAttribute="trailing" id="Thd-cy-JG4"/>
+                            <constraint firstItem="Kv6-Px-dtz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sbE-3S-A3z"/>
+                            <constraint firstItem="Kv6-Px-dtz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="zTt-UJ-Oto"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="c3Button" destination="0dw-BX-i84" id="1Fw-VG-e8K"/>
+                        <outlet property="csharp3Button" destination="FZT-6a-Z9J" id="G61-1a-TcX"/>
+                        <outlet property="d3Button" destination="o5D-Ua-thn" id="K4a-Nv-g7V"/>
+                        <outlet property="dsharp3Button" destination="kql-i7-6Wu" id="91L-sf-LGF"/>
+                        <outlet property="e3Button" destination="Kw1-6T-Mk1" id="ZDd-FZ-ylX"/>
+                        <outlet property="f3Button" destination="ygo-Vr-jCH" id="xiP-GV-LrF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1573" y="-277"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
